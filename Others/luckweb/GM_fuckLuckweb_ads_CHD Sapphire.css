@@ -1,0 +1,276 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+/*
+ * @version 0.3.2
+ * @author tuantuan <dangoakachan@foxmail.com
+ */
+
+@-moz-document url-prefix("http://luckweb.057101.com/bt2/list.asp"),
+               url-prefix("http://10.10.6.104/bt2/list.asp") {
+
+/* Theme start */
+
+body { 
+  padding: 0 !important;
+  margin: 0 auto !important;
+  background-color: #6795C7 !important;
+  color: #000 !important;
+}
+
+/* Top navigator */
+#gm_top_navi {
+  padding: 6px 10px 7px 10px !important;
+  background-color: #D0D7E3 !important;
+  border: 1px solid #6795C7 !important;
+}
+
+/* Torrents table head */
+#gm_container .tablebg1 { 
+  background-color: #70ABCF !important;
+}
+
+#gm_container .tablebg1 div {
+  color: #FFFFFF !important;
+}
+
+/* Link */
+#gm_container a { color: #182635 !important;}
+#gm_container a:hover { color: #587993 !important;}
+
+/* Border */
+#gm_container .tablebg1,
+#gm_container tr.even,
+#gm_container tr.odd,
+#gm_container tr.even > td,
+#gm_container tr.odd > td { 
+  border: 1px solid #6795C7 !important;
+}
+
+/* Even row */
+#gm_container tr.even {
+  background-color: #D0D7E3 !important;
+}
+
+/* Odd row */
+#gm_container tr.odd {
+  background-color: #E7E7E7 !important;
+}
+
+/* Row hovered */
+#gm_container tr.even:hover,
+#gm_container tr.odd:hover {
+  background-color: #BCCAD6 !important;
+}
+
+/* Theme end */
+
+#gm_container td:nth-child(2) a[href="?category=电影&tracker=local"] font { 
+  color: #BC9B14 !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=软件&tracker=local"] font { 
+  color: #684FA0 !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=动漫&tracker=local"] font { 
+  color: #00542A !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=音乐&tracker=local"] font { 
+  color: #9F2FD3 !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=游戏&tracker=local"] font { 
+  color: #00A48B !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=连续剧&tracker=local"] font { 
+  color: #456DAD !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=纪录片&tracker=local"] font { 
+  color: #85A1B6 !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=其它&tracker=local"] font { 
+  color: #65ADE1 !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=体育&tracker=local"] font { 
+  color: #C20000 !important; 
+}
+
+#gm_container td:nth-child(2) a[href="?category=综艺&tracker=local"] font { 
+  color: #00A804 !important; 
+}
+
+/* Others*/
+/* Font Setting */
+body, table, a, select, font {
+  font-family: sans-serif !important;
+}
+
+/* Hide anything first */
+body > * { display: none !important; }
+
+#gm_container { 
+  display: block !important; 
+  margin: 10px auto !important; 
+  width: 98% !important;
+}
+
+.gm_navi_item {
+  display: inline-block !important;
+}
+
+.gm_title {
+  margin-right: 8px !important;
+  font-weight: bold !important;
+}
+
+#gm_top_navi div:last-of-type { 
+  float: right !important;
+  margin-top: 5px !important;
+}
+
+#gm_top_navi input:hover,
+#gm_top_navi select:hover {
+  box-shadow: 0 0 2px #CCCCCC !important; 
+}
+
+#gm_top_navi select,
+#gm_top_navi input {
+  color: black !important;
+  margin-right: 5px !important;
+  background-color: #FFFFFF !important;
+}
+
+#gm_top_navi input {
+  height: 19px !important;
+}
+
+#gm_top_navi input[type="submit"] {
+  height: 23px !important;
+  padding: 0 2px 2px 2px !important;
+}
+
+#gm_info {
+   text-align: right !important;
+   padding: 10px !important;
+}
+
+#gm_info span { 
+   padding-left: 10px !important;
+}
+
+#gm_info b, #gm_info a {
+   margin-right: 5px !important;
+}
+
+/* Page number navigator */
+#gm_pg_navi { 
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  text-align: center !important;
+}
+
+#gm_pg_navi font > a,
+#gm_pg_navi font b {
+  margin-left: 2px !important;
+}
+
+#gm_container .tablebg1 td {
+  height: 25px !important;
+}
+
+/* Torrents table col */
+#gm_container td[nowrap]:nth-child(1) {
+  width: 115px !important;
+}
+
+/* Torrent category */
+#gm_container td:nth-child(2) {
+ width: 40px  !important;
+}
+
+/* Torrent title */
+#gm_container td:nth-child(3) {
+  padding-left: 10px !important;
+  overflow: hidden;
+  max-width: 500px !important;
+}
+ 
+/* Torrent information */
+#gm_container td:nth-child(4) { width: 70px; }
+
+/* Torrent size */
+#gm_container td:nth-child(5) { 
+  width: 60px; 
+  text-align: center !important;
+}
+  
+/* Torrents seeds */
+#gm_container td:nth-child(6) { width: 50px; }
+   
+/* Torrents downloads */
+#gm_container td:nth-child(7) { width: 50px;}
+  
+/* Torrents completes */
+#gm_container td:nth-child(8) { width: 50px; }
+ 
+/* Network traffic */
+#gm_container td:nth-child(9) { display: none !important; }
+ 
+/* Torrents publisher */
+#gm_container td:nth-child(10) { width: 90px; }
+
+/* Hide something*/
+#gm_container tr.even td:nth-child(4),
+#gm_container tr.odd td:nth-child(4) { 
+   color: transparent !important;
+}
+
+#gm_container td:nth-child(4) a:nth-of-type(2),
+#gm_container  td:nth-child(4) a:nth-of-type(3) {
+  display: none !important;
+}
+
+#gm_container td:nth-child(4) a:nth-of-type(4) { 
+  margin-left: -15px !important; 
+  margin-right: -12px !important;
+}
+
+/* Torrents brief description */
+div[id^="tip"] { 
+  font-weight: normal !important;
+  padding: 5px 15px !important;
+  white-space: normal !important;
+  width: 560px !important;
+}
+
+div[id^="tip"] tr:first-of-type,
+div[id^="tip"] tr:nth-of-type(2) td br:nth-last-of-type(-n+5) { 
+    display: none !important; 
+}
+
+div[id^="tip"] tr:nth-of-type(2) img {
+   max-width: 560px !important;
+}
+
+/* Theme edit dialog */
+#gm_theme_div {
+  position: fixed!important;
+  left: 300px!important;
+  top: 300px!important;
+  padding: 10px !important;
+  z-index: 10000!important;
+  border: 1px solid #CCCCCC !important;
+  background-color: #FFFFFF !important;
+}
+
+/* Show jscolor picker box */
+#jscolor_box {
+  display: block !important;
+}
+
+}
