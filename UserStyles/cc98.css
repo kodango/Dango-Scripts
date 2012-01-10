@@ -1,0 +1,64 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("www.cc98.org") {
+/*页面字体*/
+body, b, a, td{
+   font-family: 'Microsoft YaHei' !important;
+}
+
+/* 隐藏页面底部版权信息*/
+#copyright{
+   display: none !important;
+}
+
+/* 隐藏页面顶部广告*/
+#advImg{
+   display: none !important;
+}
+
+/* 减少页面右侧空白*/
+body{
+   margin-right: 0px !important;
+}
+
+/*防止ID过长导致分行*/
+.tablebody2[width="220"]{
+   width:230px !important;
+}
+
+/*隐藏头像*/
+/*a[href^="dispuser.asp?name="] img {
+    display: none  !important;
+}*/
+
+/*隐藏签名档图片
+.userQmd img {
+   display: none  !important;
+}*/
+
+/*帖子链接下划线标记*/
+blockquote table a:hover {
+   background-color: #3366FF !important;
+   color: #fff !important;
+   text-decoration: none !important;
+}
+
+/*隐藏帖子链接图标*/
+img[src="pic/url.gif"] {
+   display: none !important;
+}
+
+/*s标记已阅读帖子*/
+a[id^="topic_"]:visited{
+   /*方案1: 设置已访问过的链接为指定颜色*/
+   /*color: #3366FF !important;*/
+   /*方案2: 设置已访问过的链接背景色为指定颜色*/
+   /* background-color: #d8d8d8 !important;
+   -moz-border-radius: 3px !important;
+   padding: 2px 4px !important;*/
+   /*方案3: 设置已访问过的链接边框为指定颜色*/
+   border: 1px dotted #FF6600 !important;
+   /*方案4: 设置已访问过的链接文字样式*/
+   /*text-decoration: line-through !important;*/
+}
+}

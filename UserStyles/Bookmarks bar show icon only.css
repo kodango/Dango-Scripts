@@ -1,0 +1,36 @@
+@-moz-document url(chrome://browser/content/browser.xul){
+/*书签栏显示所有书签*/
+/*Show all bookmark items*/
+#personal-bookmarks .bookmark-item {
+visibility: visible !important;
+}
+
+/*只显示书签图标不显示文字*/
+/*Only show bookmark icon and not text*/
+#personal-bookmarks .bookmark-item > .toolbarbutton-text {
+   display: none !important;
+}
+
+/*书签图标更加紧凑*/
+/*Make the icons closer*/
+#personal-bookmarks .bookmark-item {   
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+}
+
+#personal-bookmarks .bookmark-item > .toolbarbutton-icon {
+   margin-right: 0px !important;
+}
+
+/*隐藏书签栏右方箭头*/
+#personal-bookmarks  toolbarbutton.chevron {
+  display:none !important;
+}
+
+/*隐藏后退下拉箭头*/
+#back-forward-dropmarker {
+    display:none !important;
+}
+}
