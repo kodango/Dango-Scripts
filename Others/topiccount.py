@@ -19,7 +19,7 @@ def encode(msg):
     return msg.decode('utf-8').encode(sys.stdout.encoding, 'ignore')
 
 def log(msg):
-    print encode(log_msg)
+    print encode(msg)
 
 def log(msg, fd=0):
     if fd == 0:

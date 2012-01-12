@@ -35,8 +35,7 @@ def save_userlist(user_list, filename = "user_list.user.js"):
         "/*",
         " * CC98 user list from name to id",
         " * Generated automatically on " + time.ctime(),
-        " */",
-        "",
+        " */\n",
     ]
 
     code_str.append("var user_list = {")
@@ -46,7 +45,8 @@ def save_userlist(user_list, filename = "user_list.user.js"):
     for userid, username in user_list:
         code_str.append(user_line % locals());
 
-    code_str.append("};")
+    code_str.append("};\n")
+    code_str.append('function find(name) { (name in user_list)?user_list[name]:"0"; }')
 
     fp.write("\n".join(code_str))
     fp.close()
