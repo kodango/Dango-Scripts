@@ -107,6 +107,7 @@ def gen_user_list(times = 5):
                 try_times = times
             else:
                 log("未抓取成用户列表，处理完成并退出")
+                break
         except urllib2.HTTPError:
             log("抓取用户列表失败, 重试%d次" % try_times)
             try_times -= 1
