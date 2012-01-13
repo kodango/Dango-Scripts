@@ -25,8 +25,8 @@ opener = None
 def encode(msg):
     return msg.decode('utf-8').encode(sys.stdout.encoding, 'ignore')
 
-def log(msg):
-    print encode(msg)
+def log(msg, sep = "\n"):
+    print encode(msg) + sep,
 
 def save_userlist(user_list, filename = "user_list.user.js"):
     fp = open(filename, "w")
@@ -84,25 +84,34 @@ def login(name, passwd):
         log('登陆失败，用户名或者密码错误')
         return False
 
-def gen_user_list(start = 1, end = -1):
-    user_list_url = "http://www.cc98.org/toplist.asp?page=1&orders=1"
+def gen_user_list(times = 5):
+    user_list_url = "http://www.cc98.org/toplist.asp?page=1&orders=7"
     user_list = []
-    page_num = start
+    found_list = []
 
-    if end == -1:
-        log("检测用户列表总页数")
-        page_content = opener.open(user_list_url).read()
-        end = re.search(r"(\d+)<\/b>页", page_content).group(1)
-        log("总共有" + end + "页")
+    page_num = 1
+    try_times = times
 
-    while page_num <= end:
+    while True:
         url = re.sub(r"(page=)\d+", "\g<1>" + str(page_num), user_list_url)
-        log("正在处理第" + str(page_num) + "页: " + url)
+        log("正在处理第" + str(page_num) + "页: " + url, ", ")
 
-        page_content = opener.open(url).read()
-        user_list.extend(re.findall(r'dispuser\.asp\?id=(\d+).*?>(.*?)<\/a>', page_content))
+        try:
+            page_content = opener.open(url).read()
+            found_list = re.findall(r'dispuser\.asp\?id=(\d+).*?>(.*?)<\/a>', page_content)
 
-        page_num += 1
+            if found_list:
+                log("抓取用户列表成功")
+                user_list.extend(found_list)
+                page_num += 1
+                try_times = times
+            else:
+                log("未抓取成用户列表，处理完成并退出")
+        except urllib2.HTTPError:
+            log("抓取用户列表失败, 重试%d次" % try_times)
+            try_times -= 1
+
+            if try_times < 0: break
 
     return user_list
 
