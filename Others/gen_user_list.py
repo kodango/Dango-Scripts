@@ -111,7 +111,7 @@ def gen_user_list(times = 5):
             log("抓取用户列表失败, 重试%d次" % try_times)
             try_times -= 1
 
-            if try_times < 0: break
+            if try_times < 0: page_num += 1
 
     return user_list
 
