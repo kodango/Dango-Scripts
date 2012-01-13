@@ -93,10 +93,11 @@ def gen_user_list(start = 1, end = -1):
         log("检测用户列表总页数")
         page_content = opener.open(user_list_url).read()
         end = re.search(r"(\d+)<\/b>页", page_content).group(1)
+        log("总共有" + end + "页")
 
     while page_num <= end:
-        log("正在处理第" + str(page_num) + "页")
         url = re.sub(r"(page=)\d+", "\g<1>" + str(page_num), user_list_url)
+        log("正在处理第" + str(page_num) + "页: " + url)
 
         page_content = opener.open(url).read()
         user_list.extend(re.findall(r'dispuser\.asp\?id=(\d+).*?>(.*?)<\/a>', page_content))
