@@ -10,6 +10,8 @@ __AUTHOR__ = "tuantuan <dangoakachan@foxmail.com>"
         "name": id,
         ...
     };
+
+    不包含未验证的用户。
 """
 
 import re
@@ -33,7 +35,7 @@ def save_userlist(user_list, filename = "user_list.user.js"):
 
     code_str = [
         "/*",
-        " * CC98 user list from name to id",
+        " * CC98 verified user list from name to id",
         " * Generated automatically on " + time.ctime(),
         " */\n",
     ]
