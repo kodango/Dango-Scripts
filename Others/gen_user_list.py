@@ -45,6 +45,7 @@ def save_userlist(user_list, filename = "user_list.user.js"):
 
     user_list.sort(key = lambda t: int(t[0]))
     for userid, username in user_list:
+        username = re.sub(r"\\", r"\\\\", username)
         code_str.append(user_line % locals());
 
     code_str.append("};\n")
