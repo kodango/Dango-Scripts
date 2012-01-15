@@ -48,7 +48,7 @@ def save_userlist(user_list, filename = "user_list.user.js"):
         code_str.append(user_line % locals());
 
     code_str.append("};\n")
-    code_str.append('function find(name) { (name in user_list)?user_list[name]:"0"; }')
+    code_str.append('function find(name) { return (name in user_list)?user_list[name]:"0"; }')
 
     fp.write("\n".join(code_str))
     fp.close()
